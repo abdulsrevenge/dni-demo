@@ -1,48 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Marchex DNI Demo (modular)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNI Demo</title>
 
-  <!-- Bootstrap CSS (keeps original look) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-
-  <!-- Default theme (CSS variables) -->
-  <link rel="stylesheet" href="themes/default.css">
-
-  <!-- Font Awesome -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <!-- Bootstrap & existing Phase-1 styles -->
+  <link rel="stylesheet" href="themes/default.css" />
+  <!-- Phase-2 theme variables -->
+  <link rel="stylesheet" href="themes/theme.css" />
 </head>
 <body>
-  <!-- Minimal shell; UI is rendered by scripts -->
-  <div id="app-root"></div>
+  <!-- Header with dynamic branding -->
+  <header>
+    <img class="brand-logo" src="" alt="Logo" style="height:40px; vertical-align:middle;">
+    <span class="brand-name"></span>
+  </header>
 
-  <!-- Modal HTML (kept for bootstrap) -->
-  <div class="modal fade modal-marchex" id="callMadeModal" tabindex="-1" role="dialog" aria-labelledby="callMadeModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="callMadeModalLabel">Call Successfully Tracked</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body" id="call-modal-body">
-                  <!-- populated by simulate-call.js -->
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-              </div>
-          </div>
-      </div>
-  </div>
+  <!-- Your existing demo controls + DNI UI -->
+  <main>
+    <!-- Optional: add dynamic text elements -->
+    <h1 id="headline"></h1>
+    <button id="cta-button"></button>
 
-  <!-- jQuery + Bootstrap JS (keeps the existing UI behaviors & modals) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Keep your existing Phase-1 HTML here -->
+    <!-- Example: -->
+    <section id="demo-controls">
+      <!-- Phase-1 controls -->
+    </section>
+    <section id="tracking-data">
+      <!-- Phase-1 tracking data -->
+    </section>
+  </main>
 
-  <!-- App entry (ES module) -->
-  <script type="module" src="scripts/app.js"></script>
+  <!-- Load config & branding first -->
+  <script src="config/config.wellsfargo.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <!-- Then load your original Phase-1 scripts -->
+  <script src="scripts/dni-core.js"></script>
+  <script src="scripts/other-phase1-modules.js"></script>
 </body>
 </html>
