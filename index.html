@@ -1,44 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DNI Demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marchex DNI Demo (modular)</title>
 
-  <!-- Bootstrap & existing Phase-1 styles -->
-  <link rel="stylesheet" href="themes/default.css" />
-  <!-- Phase-2 theme variables -->
-  <link rel="stylesheet" href="themes/theme.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <!-- Default theme -->
+  <link rel="stylesheet" href="themes/default.css">
+  <!-- Config-driven theme -->
+  <link rel="stylesheet" href="themes/theme.css">
+  <!-- Font Awesome -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
-  <!-- Header with dynamic branding -->
-  <header>
-    <img class="brand-logo" src="" alt="Logo" style="height:40px; vertical-align:middle;">
-    <span class="brand-name"></span>
+  <!-- Brand header injected from config -->
+  <header class="p-2" style="background-color: var(--brand-primary); color: white;">
+    <img class="brand-logo" src="" alt="Logo" style="height:30px; vertical-align:middle;">
+    <span class="brand-name ml-2"></span>
   </header>
 
-  <!-- Your existing demo controls + DNI UI -->
-  <main>
-    <!-- Optional: add dynamic text elements -->
-    <h1 id="headline"></h1>
-    <button id="cta-button"></button>
+  <!-- Original app mount point -->
+  <div id="app-root"></div>
 
-    <!-- Keep your existing Phase-1 HTML here -->
-    <!-- Example: -->
-    <section id="demo-controls">
-      <!-- Phase-1 controls -->
-    </section>
-    <section id="tracking-data">
-      <!-- Phase-1 tracking data -->
-    </section>
-  </main>
+  <!-- Modal (unchanged) -->
+  <div class="modal fade modal-marchex" id="callMadeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="callMadeModalLabel">Call Successfully Tracked</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body" id="call-modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Load config & branding first -->
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Config must load before app -->
   <script src="config/config.wellsfargo.js"></script>
   <script src="scripts/main.js"></script>
-
-  <!-- Then load your original Phase-1 scripts -->
-  <script src="scripts/dni-core.js"></script>
-  <script src="scripts/other-phase1-modules.js"></script>
+  <script type="module" src="scripts/app.js"></script>
 </body>
 </html>
