@@ -1,0 +1,28 @@
+:root {
+  --wf-red: #D71E28;
+  --wf-gold: #FFBC38;
+  --wf-dark-blue: #003366;
+  --marchex-blue: #0078D4;
+  --marchex-dark: #004E8C;
+}
+
+/* Minimal reset and important rules kept from original demo for consistent look */
+body { font-family: Arial, sans-serif; margin: 0; }
+.navbar-brand { font-weight: bold; font-size: 1.3rem; }
+
+/* Layout containers */
+.tracking-panel { border-right: 1px solid #dee2e6; height: calc(100vh - 110px); overflow-y: auto; background-color: #f8f9fa; }
+.website-panel { height: calc(100vh - 110px); overflow-y: auto; background-color: white; }
+
+/* Phone number styling */
+.phone-number { color: var(--wf-red); font-weight: bold; font-size: 1.2rem; }
+
+/* Progress bar */
+.progress-indicator { height: 10px; margin-bottom: 0; }
+.progress-indicator .progress-bar { transition: width 0.5s ease-in-out; }
+
+/* Small niceties */
+.feature-badge { background-color: var(--wf-gold); color: black; font-size: 0.75rem; }
+
+/* Keep consistent fonts throughout */
+* { font-family: Arial, sans-serif !important; }
