@@ -1,3 +1,5 @@
+
+import { showPage } from './ui.js';
 export function initNavigation(config, tracking, opts = {}) {
   const root = document.getElementById('app-root');
   root.innerHTML = renderShell(config);
