@@ -1,0 +1,98 @@
+{
+  "brand": {
+    "name": "Wells Fargo",
+    "logo": "/assets/logo.png",
+    "colors": {
+      "--wf-red": "#D71E28",
+      "--wf-gold": "#FFBC38",
+      "--wf-dark-blue": "#003366",
+      "--marchex-blue": "#0078D4",
+      "--marchex-dark": "#004E8C"
+    },
+    "favicon": ""
+  },
+  "pages": {
+    "search": {
+      "urlDisplay": "www.google.com/search?q=small+business+checking+account"
+    },
+    "landing": {
+      "urlDisplay": "https://www.wellsfargo.com/biz/"
+    },
+    "checking": {
+      "urlDisplay": "https://www.wellsfargo.com/biz/checking/"
+    },
+    "initiate": {
+      "urlDisplay": "https://www.wellsfargo.com/biz/checking/initiate/"
+    },
+    "navigate": {
+      "urlDisplay": "https://www.wellsfargo.com/biz/checking/navigate/"
+    },
+    "optimize": {
+      "urlDisplay": "https://www.wellsfargo.com/biz/checking/optimize/"
+    }
+  },
+  "phones": {
+    "original": [
+      {
+        "number": "1-800-416-8658",
+        "pattern": "*/checking/",
+        "pool": "session"
+      },
+      {
+        "number": "1-800-416-8658",
+        "pattern": "*/checking/initiate/",
+        "pool": "session"
+      },
+      {
+        "number": "1-800-416-8658",
+        "pattern": "*/checking/navigate/",
+        "pool": "session"
+      },
+      {
+        "number": "1-866-902-9181",
+        "pattern": "*/checking/optimize/",
+        "pool": "session"
+      }
+    ],
+    "pools": {
+      "session": {
+        "prefix": "800",
+        "count": 50
+      }
+    }
+  },
+  "demo": {
+    "defaultSource": "google",
+    "defaultCampaign": "paid",
+    "trackingIdentifier": "7161e16912d84f29bf318e6e6e29d07f"
+  },
+  "dniRules": [
+    {
+      "pattern": "*/checking/",
+      "original": "1-800-416-8658",
+      "pool": "session"
+    },
+    {
+      "pattern": "*/checking/initiate/",
+      "original": "1-800-416-8658",
+      "pool": "session"
+    },
+    {
+      "pattern": "*/checking/navigate/",
+      "original": "1-800-416-8658",
+      "pool": "session"
+    },
+    {
+      "pattern": "*/checking/optimize/",
+      "original": "1-866-902-9181",
+      "pool": "session"
+    }
+  ],
+  "copy": {
+    "callSummaries": {
+      "navigate": "Customer called regarding opening a new business checking account for their startup consulting business. Agent explained the benefits of the Navigate account's higher transaction limits compared to Initiate.",
+      "initiate": "New small business owner called inquiring about the most affordable checking option. Agent explained the Initiate account benefits and fee waiver options.",
+      "optimize": "Business owner called regarding premium checking options. Agent provided detailed explanation of treasury management services and scheduled specialist follow-up."
+    }
+  }
+}
