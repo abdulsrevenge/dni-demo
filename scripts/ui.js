@@ -214,7 +214,7 @@ function wireUI(config, tracking) {
   $('#app-root').on('click', '#call-tab', function(e){ e.preventDefault(); switchTab('#call-data'); });
 }
 
-export function showPage(key) { {
+export function showPage(key) {
   $('#website-panel > div').hide();
   const mapping = {
     'search': '#search-page',
